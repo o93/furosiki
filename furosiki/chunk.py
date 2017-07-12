@@ -1,18 +1,19 @@
 import numpy as np
+import dimen
 
 class Chunk():
-  X = 0
-  Y = 1
-  Z = 2
-
-  def __init__(self, pos, size):
+  def __init__(self, pos, size, cube):
     self.pos = pos
     self.size = size
-
-    self.cube = np.zeros((size[Chunk.Y], size[Chunk.Z], size[Chunk.X]))
+    self.cube = cube
 
 if __name__ == '__main__':
-  chunk = Chunk(np.array([1, 2, 3]), np.array([2, 4, 2]))
+  pos = np.array([1, 2, 3], np.int64)
+  size = np.array([2, 4, 2], np.int64)
+  cube = np.zeros((size[dimen.X], size[dimen.Y], size[dimen.Z]), np.int64)
+
+  chunk = Chunk(pos, size, cube)
+
   print(chunk.pos)
   print(chunk.size)
   print(chunk.cube)
