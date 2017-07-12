@@ -9,7 +9,7 @@ class Chunk():
 
 if __name__ == '__main__':
   pos = np.array([1, 2, 3], np.int64)
-  size = np.array([2, 4, 2], np.int64)
+  size = np.array([4, 8, 4], np.int64)
   cube = np.zeros((size[dimen.X], size[dimen.Y], size[dimen.Z]), np.int64)
 
   chunk = Chunk(pos, size, cube)
