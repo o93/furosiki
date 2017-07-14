@@ -1,4 +1,5 @@
 import chunk as ck
 
 class Creator():
-  pass
+
+  def create(self):
