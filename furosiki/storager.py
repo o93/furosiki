@@ -11,6 +11,6 @@ class Storager():
 
 if __name__ == '__main__':
 
-  chunk = ck.Chunk()
+  chunk = ck.create(1, 2, 3)
   storager = Storager()
   storager.save(chunk)
